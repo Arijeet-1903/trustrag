@@ -1,0 +1,17 @@
+# TrustRAG Application Configuration
+
+app:
+  name: "TrustRAG"
+  version: "0.1.0"
+  description: "Trustworthy, table-aware, version-aware financial regulatory compliance RAG system"
+  environment: "development"
+
+logging:
+  level: "INFO"
+  format: "json"
+
+paths:
+  data_dir: "data"
+  config_dir: "configs"
+  docs_dir: "docs"
+

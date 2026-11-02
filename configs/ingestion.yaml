@@ -1,0 +1,23 @@
+# Ingestion Pipeline Configuration for TrustRAG
+
+domain:
+  name: "RBI Financial Regulatory Compliance"
+  jurisdiction: "India"
+  primary_regulator: "Reserve Bank of India (RBI)"
+  scope:
+    - "Master Directions (KYC, Commercial Banks - Internal Ombudsman)"
+    - "Regulatory Amendments & Notifications"
+
+paths:
+  raw_docs_dir: "data/raw/rbi_docs"
+  processed_dir: "data/processed"
+  manifest_path: "data/sources.json"
+
+parsing:
+  min_chars_per_page: 40
+  heading_min_font_size: 12.0
+  extract_tables: true
+  quality_checks:
+    flag_scanned_docs: true
+    min_printable_char_ratio: 0.85
+

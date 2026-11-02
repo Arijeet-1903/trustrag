@@ -1,0 +1,28 @@
+# Secrets — never commit these
+.env
+*.env
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Indexes / Embeddings caches (large generated binary data)
+data/indexes/*
+!data/indexes/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+
+# OS / editor junk
+.DS_Store
+.vscode/
+.idea/
+*.swp
