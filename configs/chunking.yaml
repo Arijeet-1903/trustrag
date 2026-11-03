@@ -1,0 +1,37 @@
+# Chunking & Indexing Configuration for TrustRAG
+
+chunking:
+  strategy: "structure_aware"   # "fixed_size", "recursive", "structure_aware"
+  chunk_size: 500              # Target chunk size in characters/approx tokens
+  chunk_overlap: 50            # Overlap between consecutive text chunks
+  min_chunk_size: 100          # Minimum chunk size to prevent tiny fragments
+  
+  boundaries:
+    protect_numbers_and_units: true
+    protect_sentence_boundaries: true
+    unit_patterns:
+      - "INR"
+      - "Rs."
+      - "Rupees"
+      - "lakh"
+      - "crore"
+      - "percent"
+      - "%"
+      - "days"
+      - "months"
+      - "years"
+      - "Section"
+      - "Paragraph"
+      - "Clause"
+
+tables:
+  format: "markdown_and_structured"
+  max_rows_per_chunk: 10
+  repeat_headers_on_split: true
+  include_caption_context: true
+
+indexing:
+  embedding_model: "deterministic_mock"  # "all-MiniLM-L6-v2", "deterministic_mock"
+  vector_dimension: 384
+  storage: "chroma"                      # "chroma", "in_memory"
+  persist_directory: "data/indexes/chroma"

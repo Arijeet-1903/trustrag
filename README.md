@@ -91,7 +91,17 @@ trustrag/
   - [x] Scanned/empty page quality checks
   - [x] 126 pages and 26 tables extracted to structured JSON
   - [x] 5 unit tests passing
-- [ ] **Week 2 — Structure-aware chunking, tables, and initial index**
+- [x] **Week 2 — Structure-aware chunking, tables, and initial index**
+  - [x] Baseline fixed and recursive character chunkers with protected boundaries
+  - [x] Number & unit protection (INR/Rs., percentages, time units, citations)
+  - [x] Structure-aware chunker preserving section heading hierarchy
+  - [x] Table-aware processing preserving row-column pairs, markdown, and structured JSON
+  - [x] Large table row partitioning with repeated column headers and captions
+  - [x] Embeddings abstraction (SentenceTransformers + Deterministic Mock)
+  - [x] Chroma persistent vector store + in-memory testing backend
+  - [x] Idempotent index manager with change detection, version updates, and stale chunk purges
+  - [x] 736 regulatory chunks indexed into Chroma
+  - [x] 16 unit tests passing (100% pass rate)
 - [ ] **Week 3 — Evaluation set and dense/lexical baseline**
 - [ ] **Week 4 — Controlled chunking and retrieval experiments**
 - [ ] **Week 5 — Grounded answers, citations, and claim-level verification**
