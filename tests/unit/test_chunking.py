@@ -202,3 +202,4 @@ def test_large_table_splitting_preserves_headers():
         assert "| Col A | Col B | Col C |" in c.text
         assert f"Part {idx+1}/3" in c.text
         assert len(c.structured_content["rows"]) == 5
+

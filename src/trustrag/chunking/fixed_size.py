@@ -160,3 +160,4 @@ class FixedSizeChunker:
             )
 
         return result
+

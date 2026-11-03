@@ -133,3 +133,4 @@ def get_embedding_model(
 
     _MODEL_REGISTRY[cache_key] = model
     return model
+

@@ -188,3 +188,4 @@ def test_version_update_purges_stale_chunks(in_memory_store, tmp_path):
     current_chunk = in_memory_store.list_chunks()[0]
     assert current_chunk.version == "2.0"
     assert "amended limit INR 50,000" in current_chunk.text
+

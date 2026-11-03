@@ -35,3 +35,4 @@ indexing:
   vector_dimension: 384
   storage: "chroma"                      # "chroma", "in_memory"
   persist_directory: "data/indexes/chroma"
+

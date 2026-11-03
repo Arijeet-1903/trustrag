@@ -169,3 +169,4 @@ class IndexManager:
             "embedding_model": self.vector_store.embedding_model.model_name,
             "documents": self.manifest.documents
         }
+
